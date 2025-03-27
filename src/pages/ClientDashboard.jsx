@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./ClientDashboard.css"; // Assuming you create a new CSS file
+import "../styles/ClientDashboard.css"; // Assuming you create a new CSS file
 
 const ClientDashboard = () => {
   const navigate = useNavigate();
