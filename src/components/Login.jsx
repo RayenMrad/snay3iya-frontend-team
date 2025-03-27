@@ -9,11 +9,10 @@ const Login = () => {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
     const data = { email, password, rememberMe };
 
     try {
-      // Using Axios to send the POST request
       const response = await axios.post(
         "http://localhost:5000/api/login",
         data
@@ -21,6 +20,22 @@ const Login = () => {
 
       if (response.status === 200) {
         console.log("Login successful", response.data);
+        if (response.data.token) {
+          localStorage.setItem("token", response.data.token);
+          // Store the user ID (adjust the key based on your backend response)
+          const userId = response.data.userId; // Common variations
+          if (userId) {
+            localStorage.setItem("userId", userId);
+          } else {
+            console.error("No user ID returned from login response");
+          }
+        }
+        const userRole = response.data.role || response.data.user?.role;
+        if (userRole === "service_provider") {
+          window.location.href = "/serviceProviderProfile";
+        } else {
+          window.location.href = "/userDashboard";
+        }
       } else {
         console.log("Login failed", response.data);
       }
