@@ -5,6 +5,7 @@ import Register from "./components/Register";
 import { Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 import ClientDashboard from "./components/ClientDashboard";
+import ServiceRequestForm from "./pages/ClientRequestForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<ClientDashboard />} />
+        <Route path="/ClientRequestForm" element={< ServiceRequestForm />} />
       </Routes>
     </div>
   );
