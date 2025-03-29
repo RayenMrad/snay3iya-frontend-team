@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { FaChartPie, FaMessage } from "react-icons/fa6";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "./Sidebar.css";
+import "../../../styles/Sidebar.css"; // Import the CSS file
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -30,7 +30,11 @@ const Sidebar = () => {
   const outilsMenuItems = [
     { icon: <FaMessage />, name: "Messages", path: "/messages" },
     { icon: <FaChartPie />, name: "Statistics", path: "/statistics" },
-    { icon: <FaCog />, name: "Settings", path: "/settings" },
+    {
+      icon: <FaCog />,
+      name: "Settings",
+      path: "/serviceProviderSettings",
+    },
   ];
 
   const bottomMenuItems = [

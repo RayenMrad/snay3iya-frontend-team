@@ -18,7 +18,7 @@ import {
   FaExclamationTriangle,
 } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Sidebar from "./SideBar/SideBar";
+import Sidebar from "../components/service-provider/SideBar/SideBar";
 
 const ServiceProviderDashboard = () => {
   const recentRequests = [

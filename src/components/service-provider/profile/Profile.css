@@ -97,3 +97,23 @@
   flex: 1; /* Each card takes equal space */
   max-width: 300px; /* Limit the width of each card to make them smaller */
 }
+
+/* Style for the list containing ProfileCards */
+.profile-cards-list {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0 0 1.5rem 0; /* Add some bottom margin for spacing */
+  display: flex; /* Display items in a row */
+  gap: 1rem; /* Space between cards */
+}
+
+/* Style for each list item */
+.profile-cards-list li {
+  flex: 1; /* Each card takes equal space */
+  max-width: 300px; /* Limit the width of each card to make them smaller */
+}
+
+/* Icon color for FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock */
+.text-muted {
+  color: #00c846 !important; /* Override Bootstrap's text-muted with green */
+}
