@@ -1,0 +1,318 @@
+/* Settings.css */
+
+/* Global container and layout */
+.settings-container {
+  background-color: #f9fafb; /* Softer light gray background */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif; /* Modern font stack */
+}
+
+/* Main content area */
+.main-content {
+  background-color: #ffffff; /* White background for the main content */
+  min-height: 100vh; /* Full height */
+  padding: 3rem 4rem; /* More generous padding */
+}
+
+/* Title */
+.settings-title {
+  font-size: 2rem; /* Larger title */
+  font-weight: 700; /* Bolder */
+  color: #1a202c; /* Darker gray for better contrast */
+  letter-spacing: -0.02em; /* Slight letter spacing for elegance */
+}
+
+/* Tabs Navigation */
+.settings-tabs {
+  border-bottom: 1px solid #e2e8f0; /* Softer border */
+  margin-bottom: 3rem; /* More space below */
+  display: flex;
+  gap: 2rem; /* Space between tabs */
+}
+
+.settings-tabs .tab {
+  color: #6b7280; /* Softer gray for inactive tabs */
+  text-decoration: none;
+  padding: 0.75rem 0; /* More padding for better click area */
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.settings-tabs .tab.active {
+  color: #00b341; /* Slightly darker green for elegance */
+  font-weight: 600;
+}
+
+.settings-tabs .tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #00b341, #00d95f); /* Gradient underline */
+}
+
+.settings-tabs .tab:hover {
+  color: #00b341; /* Green on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Section Styling */
+.settings-section {
+  background-color: #f9fafb; /* Softer light gray background */
+  padding: 2rem; /* More padding for breathing room */
+  border-radius: 1rem; /* Softer rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.settings-section:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow on hover */
+}
+
+.section-title {
+  font-size: 1.5rem; /* Larger section title */
+  font-weight: 600;
+  color: #1a202c; /* Darker gray */
+  letter-spacing: -0.01em;
+}
+
+/* Form Rows */
+.settings-row {
+  padding: 0.5rem 0; /* Add padding to rows */
+  border-bottom: 1px solid #edf2f7; /* Subtle divider */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.settings-row:hover {
+  background-color: #f1f5f9; /* Light hover effect */
+}
+
+/* Form Labels */
+.settings-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748; /* Slightly lighter dark gray */
+}
+
+/* Form Selects */
+.settings-select {
+  border-radius: 0.75rem; /* Softer rounded corners */
+  border: 1px solid #e2e8f0; /* Softer border */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle inset shadow */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.settings-select:focus {
+  border-color: #00b341; /* Green border on focus */
+  box-shadow: 0 0 0 3px rgba(0, 179, 65, 0.1); /* Green glow on focus */
+  outline: none;
+}
+
+/* Toggle Switches */
+.elegant-switch {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.elegant-switch .form-check-input {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e8f0; /* Softer gray when off */
+  border: none;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.elegant-switch .form-check-input:checked {
+  background: linear-gradient(90deg, #00b341, #00d95f); /* Gradient when on */
+}
+
+.elegant-switch .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 179, 65, 0.1); /* Green glow on focus */
+  outline: none;
+}
+
+/* Links in Sections */
+.settings-link {
+  color: #2d3748; /* Dark gray */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-link:hover {
+  color: #00b341; /* Green on hover */
+  transform: translateX(5px); /* Subtle slide effect */
+}
+
+.settings-link .arrow {
+  color: #00b341; /* Green arrow */
+  font-size: 1rem;
+  margin-left: 0.25rem;
+}
+
+/* Danger Section */
+.danger-section {
+  background-color: #fef6f6; /* Softer light red background */
+  border: 1px solid #fed7d7; /* Subtle red border */
+}
+
+.danger-title {
+  color: #e53e3e; /* Softer red */
+  font-weight: 600;
+}
+
+.settings-description {
+  font-size: 0.9rem;
+  color: #718096; /* Softer gray */
+  margin-top: 0.25rem;
+}
+
+.danger-btn {
+  background: linear-gradient(
+    90deg,
+    #e53e3e,
+    #f56565
+  ); /* Gradient red button */
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.danger-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #c53030,
+    #e53e3e
+  ); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3); /* Red shadow on hover */
+}
+
+/* Action Buttons */
+.cancel-btn {
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: #718096; /* Softer gray */
+  border: 1px solid #e2e8f0; /* Softer border */
+  background-color: #ffffff;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #f1f5f9; /* Light gray on hover */
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.save-btn {
+  background: linear-gradient(
+    90deg,
+    #00b341,
+    #00d95f
+  ); /* Gradient green button */
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.save-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #009c36,
+    #00b341
+  ); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: 0 4px 15px rgba(0, 179, 65, 0.3); /* Green shadow on hover */
+}
+
+/* Confirmation Modal */
+.delete-confirmation-modal .modal-content {
+  border-radius: 1rem; /* Softer rounded corners */
+  border: none; /* Remove default border */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Elegant shadow */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e2e8f0; /* Softer border */
+  padding: 1.5rem 2rem; /* More padding */
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c; /* Darker gray */
+}
+
+.modal-body {
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  color: #2d3748; /* Slightly lighter dark gray */
+  line-height: 1.6; /* Better readability */
+}
+
+.modal-footer {
+  border-top: 1px solid #e2e8f0; /* Softer border */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem; /* Space between buttons */
+}
+
+.modal-cancel-btn {
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  color: #718096; /* Softer gray */
+  border: 1px solid #e2e8f0; /* Softer border */
+  background-color: #ffffff;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.modal-cancel-btn:hover {
+  background-color: #f1f5f9; /* Light gray on hover */
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+.modal-confirm-btn {
+  background: linear-gradient(
+    90deg,
+    #e53e3e,
+    #f56565
+  ); /* Gradient red button */
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-confirm-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #c53030,
+    #e53e3e
+  ); /* Darker gradient on hover */
+  transform: translateY(-2px); /* Subtle lift */
+  box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3); /* Red shadow on hover */
+}
